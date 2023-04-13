@@ -1,0 +1,27 @@
+- summary: |
+    Проверка поиска по ключевому слову
+  status: pass
+
+- summary: |
+    Проверка поиска по категории
+  status: fail
+
+- summary: |
+    Проверка просмотра товаров 
+  status: pass
+
+- summary: |
+    Проверка добавления товара в корзину
+  status: pass
+
+- summary: |
+    Проверка возможности просмотреть содержимое корзины
+  status: pass
+
+- summary: |
+    Проверка кроссбраузерности Google Chrome
+  status: pass
+
+- summary: |
+    Проверка кроссбраузерности Firefox Browser
+  status: pass 
