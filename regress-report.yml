@@ -1,0 +1,63 @@
+---
+test-cases:
+  - summary: |
+      Проверка поиска по ключевому слову
+    status: pass
+
+  - summary: |
+      Проверка поиска по категории
+    status: fail
+
+  - summary: |
+      Проверка просмотра товаров 
+    status: pass
+
+  - summary: |
+      Проверка добавления товара в корзину
+    status: pass
+
+  - summary: |
+      Проверка возможности просмотреть содержимое корзины
+    status: pass
+
+  - summary: |
+      Проверка кроссбраузерности Google Chrome
+    status: pass
+
+  - summary: |
+      Проверка кроссбраузерности Firefox Browser
+    status: pass 
+
+  - summary: |
+      Проверка мобильной версии
+    status: fail
+
+bugreports:
+  - summary: |
+      Не работает поиск по категории 
+    environment: |
+      Google Chrome Версия 112.0.5615.87 (Официальная сборка), (64 бит)
+      ОС Windows 10 Pro 22H2
+    steps-to-reproduce: |
+      1. Зайти на страница сайта https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. В поле поиск ввести название категории skincare
+    expected-result: |
+      Отображаются товары, относящиеся к данной категории 
+    actual-result: |
+      Выводятся все товары магазина
+
+  - summary: |
+      Отсутствие мобильной версии
+    environment: |
+      Google Chrome Версия 112.0.5615.87 (Официальная сборка), (64 бит)
+      ОС Windows 10 Pro 22H2
+    steps-to-reproduce: |
+      1. Зайти на страница сайта https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Открыть DevTools
+      3. Нажать Ctrl + Shift + M
+      4. Выбрать из списка устройство - Nest Hub Max
+      5. Выбрать бренд из списка - OPPO
+    expected-result: |
+      Должна присутствовать адаптивность
+    actual-result: |
+      Элементы страницы наслаиваются друг на друга, кнопки имеют разный размер(размер кнопок регр.png), текст выходит за рамки экрана(Выход элементов за рамки регресс.png)
