@@ -1,0 +1,27 @@
+---
+- summary: |
+    Не работает поиск по категории 
+  environment: |
+    Google Chrome Версия 112.0.5615.87 (Официальная сборка), (64 бит)
+    ОС Windows 10 Pro 22H2
+  steps-to-reproduce: |
+    1. Зайти на страница сайта https://hexlet-products-store.vercel.app/
+    2. В поле поиск ввести название категории skincare
+  expected-result: |
+    Отображаются товары, относящиеся к данной категории 
+  actual-result: |
+    Выводится сообщение - "Nothing found!"/ "Ничего не найдено!"
+
+- summary: |
+    отсутствие мобильной версии
+  environment: |
+    Google Chrome Версия 112.0.5615.87 (Официальная сборка), (64 бит)
+    ОС Windows 10 Pro 22H2
+  steps-to-reproduce: |
+    1. Зайти на страница сайта https://hexlet-products-store.vercel.app/
+    2. Открыть DevTools
+    3. Нажать Ctrl + Shift + M
+  expected-result: |
+    Должна присутствовать адаптивность
+  actual-result: |
+    Элементы страницы наслаиваются друг на друга(Наслоение.png), кнопки имеют разный размер(Размер кнопок.png), текст выходит за рамки экрана(Выход текста за рамки.png)
