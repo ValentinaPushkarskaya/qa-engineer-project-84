@@ -25,3 +25,7 @@
 - summary: |
     Проверка кроссбраузерности Firefox Browser
   status: pass 
+
+- summary: |
+    Проверка мобильной версии
+  status: fail
